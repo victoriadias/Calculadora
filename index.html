@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Vencimentos</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Vencimentos</h1>
+        <label for="dataInicial">Data Inicial:</label>
+        <input type="date" id="dataInicial" placeholder="Data inicial">
+        <div id="vencimentos">
+            <div id="vencimento1-container">
+                <label for="vencimento1">1º vencimento:</label>
+                <input type="date" id="vencimento1" class="vencimento">
+                <button onclick="removerVencimento('vencimento1-container')">-</button>
+            </div>
+        </div>
+        <button onclick="adicionarVencimento()">Adicionar vencimento</button>
+        <button onclick="calcularVencimentos()">Enviar</button>
+        <div id="resultado"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
