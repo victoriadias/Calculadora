@@ -12,6 +12,9 @@ function adicionarVencimento() {
 }
 
 function removerVencimento(id) {
+    if (id === 'vencimento1-container') {
+        return;
+    }
     const vencimentoElement = document.getElementById(id);
     vencimentoElement.remove();
     atualizarVencimentos();
