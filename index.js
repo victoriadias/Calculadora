@@ -44,7 +44,7 @@ function calcularVencimentos() {
     resultadoDiv.innerHTML = '';
 
     if (isNaN(dataInicial.getTime())) {
-        resultadoDiv.innerHTML = '<p>Por favor, insira uma data inicial válida.</p>';
+        resultadoDiv.innerHTML = '<p>Por favor, insira uma data de emissão.</p>';
         return;
     }
 
@@ -70,9 +70,7 @@ function calcularVencimentos() {
     }
 }
 
-// Initialize event listeners when the page loads
 document.addEventListener('DOMContentLoaded', function() {
-    // Add event listeners for buttons if they exist
     const addButton = document.querySelector('button[onclick="adicionarVencimento()"]');
     if (addButton) {
         addButton.removeAttribute('onclick');
@@ -85,7 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
         calcButton.addEventListener('click', calcularVencimentos);
     }
     
-    // Set up event delegation for remove buttons
     document.getElementById('vencimentos').addEventListener('click', function(e) {
         if (e.target.tagName === 'BUTTON' && e.target.textContent === '-') {
             const containerId = e.target.closest('div').id;
